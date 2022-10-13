@@ -24,6 +24,45 @@ public class CalculatorMathematics {
         System.out.println("Welcome to Calculator");
     }
 
+
+    public static double getNUmber() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number : ");
+
+        return scanner.nextInt();
+    }
+
+
+    public static void handleMathOperations(char operationType, double number1, double number2) {
+        double result;
+        switch (operationType) {
+            case '+':
+                result = CalculatorMathematics.addition(number1, number2);
+                System.out.println("The answer is " + result);
+                break;
+
+            case '-':
+                result = CalculatorMathematics.subtraction(number1, number2);
+                System.out.println("The answer is " + result);
+                break;
+
+            case '/':
+                result = CalculatorMathematics.division(number1, number2);
+                System.out.println("The answer is " + result);
+                break;
+
+            case '*':
+                result = CalculatorMathematics.multiplication(number1, number2);
+                System.out.println("The answer is " + result);
+                break;
+
+            default:
+                System.out.println("Something went wrong try again");
+
+        }
+    }
+
+
     public static boolean isContinue (){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do you want to continue? (Yes or no?");
