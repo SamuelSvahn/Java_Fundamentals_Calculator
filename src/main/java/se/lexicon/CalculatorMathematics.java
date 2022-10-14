@@ -24,15 +24,6 @@ public class CalculatorMathematics {
         System.out.println("Welcome to Calculator");
     }
 
-
-    public static double getNUmber() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number : ");
-
-        return scanner.nextInt();
-    }
-
-
     public static void handleMathOperations(char operationType, double number1, double number2) {
         double result;
         switch (operationType) {
@@ -59,17 +50,29 @@ public class CalculatorMathematics {
             default:
                 System.out.println("Something went wrong try again");
 
+
         }
     }
 
-
-    public static boolean isContinue (){
+    public static boolean isContinue() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do you want to continue? (Yes or no?");
         String continueOperation = scanner.next();
         if (continueOperation.equalsIgnoreCase("no")) {
             System.out.println("Thanks for trying the calculator");
             return false;
-        }else return true;
+        } else return true;
     }
-}
+
+        public static double getNumber() {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter a number:");
+            return scanner.nextInt();
+
+
+
+        }
+
+
+    }
+
